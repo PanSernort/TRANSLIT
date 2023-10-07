@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/normolize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;600&display=swap" rel="stylesheet">
+    <script defer src="index.js"></script>
+    <title>Транслит</title>
+  </head>
+  <body>
+    <div class="box">
+      <h2 class="Translit">T.R.A.N.S.L.I.T</h2>
+      <div class="input">
+        <input
+          class="blockInput"
+          type="text"
+          placeholder="Начните вводить текст"
+        />
+        <button class="buttonInside">Добавить</button>
+      </div>
+      <div class="dictionary">
+        <table class="table">
+          <thead>
+         
+          </thead>
+          <tbody id="pain" class="table-body">
+            <tr>
+              <td class="roundeLeft" style="border-radius: 8px 0 0 8px"></td>
+              <td class="russianTable">Привет 👋</td>
+              <td class="latinaTable">Privet</td>
+              <td class="deletBotten" style="border-radius: 0 8px 8px 0"><img src="icons/Group 1.svg" alt=""></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="refresh">
+        <button class="clear-button"><img src="icons/Group 7.svg" alt="#"> Очистить текст</button>
+      </div>
+    </div>
+  </body>
+</html>

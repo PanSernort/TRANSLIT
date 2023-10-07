@@ -1,0 +1,268 @@
+body {
+  margin-top: 150px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.Translit {
+  color: var(--main-purple, #4520ab);
+  text-align: center;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -3.2px;
+}
+
+.input {
+  width: 500px;
+  height: 56px;
+  border-radius: 14px;
+  border: 2px solid var(--bg-black, #111);
+  display: flex;
+  font-family: "IBM Plex Sans";
+  font-weight: 300;
+  font-style: normal;
+}
+
+.blockInput {
+  border: none;
+  flex-grow: 1;
+  outline: none;
+  padding: 5px;
+  justify-content: center;
+  margin-left: 5px;
+  border-radius: 10px;
+}
+
+.buttonInside {
+  height: 38.08px;
+  padding: 5px 12px 5px 12px;
+  border-radius: 8px;
+  background: var(--bg-black, #111);
+  cursor: pointer;
+  color: white;
+  margin-top: 9px;
+  margin-right: 7px;
+  border: none;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.buttonInside:active {
+  transform: translateY(2px);
+}
+
+
+
+table {
+  display: flex;
+  flex-direction: column;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 35px;
+  border-radius: 8px;
+  /* overflow: hidden; */
+  border-collapse: collapse;
+  width: 500px;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+
+
+.table-body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  counter-reset: row-counter;
+}
+
+td:nth-child(1) {
+  width: 50px;
+  /* border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px; */ 
+}
+
+td:nth-child(1)::before{
+  counter-increment: row-counter;
+  content: counter(row-counter);
+}
+
+
+td:nth-child(2) {
+  width: 200px;
+  position: relative;
+}
+td:nth-child(3) {
+  width: 200px;
+  position: relative;
+}
+td:nth-child(4) {
+  width: 50px;
+  /* border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px; */
+  
+}
+
+td:nth-child(n + 1) {
+  background-color: #f2f2f2;
+  height: 50px;
+}
+
+td:nth-child(n + 3) {
+  background-color: rgb(179, 171, 171);
+  border-left: none;
+}
+
+.with-top-border {
+  border-top: 1px solid black;
+}
+
+td:nth-child(3) {
+  border-left: 2px solid black;
+}
+
+.table tbody tr:first-child td:first-child {
+  border-radius: 8px 0 0 0;
+}
+.table tbody tr:first-child td:last-child {
+  border-radius: 0 8px 0 0;
+}
+
+.table tbody tr:last-child td:first-child {
+  border-radius: 0 0 0 8px;
+}
+.table tbody tr:last-child td:last-child {
+  border-radius: 0 0 8px 0;
+}
+
+
+th,
+td {
+  text-align: center;
+}
+
+.russianTable {
+  text-align: center;
+  padding-right: 0;
+}
+
+.latinaTable {
+  text-align: center;
+}
+
+.static {
+  border-radius: 8px;
+}
+
+.refresh {
+  display: flex;
+  text-align: center;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.clear-button > img {
+  margin-right: 10px;
+}
+
+.clear-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px 10px 20px;
+  text-align: end;
+  font-family: IBM Plex Mono;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.9px;
+  border: none;
+  border-radius: 8px;
+  margin-top: 30px;
+  background-color: #adadad;
+}
+
+.clear-button:active {
+  transform: translateY(2px);
+}
+
+/* Стили для всплывающей подсказки */
+.tooltip {
+  cursor: pointer;
+}
+
+.long-word::before {
+  content: attr(title);
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 8px 16px 10px 16px;
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.7s ease;
+  width: 240px;
+  /* transform: translateX(50%); */
+  word-wrap: break-word;
+  /* height: auto; */
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.1);
+  bottom: 60%;
+}
+
+.long-word:hover::before {
+  opacity: 1;
+}
+
+
+@media screen and (max-width: 520px) and (max-height: 844px) {
+  body {
+    top: 20px;
+    padding: 0;
+    bottom: 80px;
+    right: 10px;
+  }
+
+  .Translit {
+    margin-left: 20px;
+  }
+
+  .input {
+    width: 250px;
+    margin-left: 30px;
+    display: flex;
+    justify-content: end;
+  }
+
+  .blockInput {
+    width: 10px;
+  }
+
+  table {
+    width: 255px;
+    margin-left: 30px;
+  }
+
+  .latinaTable {
+    text-align: center;
+    padding-left: 14px;
+  }
+
+  td:nth-child(4) .delet {
+    width: 14px;
+    padding-right: 20px;
+  }
+
+  .refresh {
+    margin-left: 30px;
+    position: static;
+  }
+
+}
